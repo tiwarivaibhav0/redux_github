@@ -16,7 +16,7 @@ function App(props) {
     var tempData = [];
     let options = {
       headers: {
-        Authorization: `Bearer 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`,
+        Authorization: `Bearer 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`,
       },
     };
     let res = await fetch("https://api.github.com/users", options);
