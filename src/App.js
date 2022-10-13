@@ -21,7 +21,7 @@ function App(props) {
     };
     let res = await fetch("https://api.github.com/users", options);
     let data = await res.json();
-
+    if (!res.response) alert("Error in Fetching Data");
     data.map(async (it, i) => {
       if (
         it.login.toLowerCase().includes(props.username.toLowerCase()) &&
