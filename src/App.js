@@ -14,12 +14,8 @@ function App(props) {
 
   const fetchhandler = async () => {
     var tempData = [];
-    let options = {
-      headers: {
-        Authorization: `Bearer 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`,
-      },
-    };
-    let res = await fetch("https://api.github.com/users", options);
+    
+    let res = await fetch("https://api.github.com/users",);
     let data = await res.json();
     data.map(async (it, i) => {
       if (
@@ -28,7 +24,6 @@ function App(props) {
       ) {
         let newres = await fetch(
           `https://api.github.com/users/${it.login}`,
-          options
         );
         let finalData = await newres.json();
         console.log(finalData);
